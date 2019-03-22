@@ -22,9 +22,9 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-laravel">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ url('/home') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
 
@@ -35,18 +35,6 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                      <li class="nav-item active">
-                        <a class="nav-link" href="/about">About<span class="sr-only">(current)</span></a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                      </li>
-                    </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -84,9 +72,32 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
+        
+        <div class="container-fluid">
+          <div class="row">
+              <div class="col-sm-2 px-1" id="sidebar">
+                  <div class="py-2 sticky-top flex-grow-1">
+                      <div class="">
+                          <ul class="nav flex-sm-column">
+                              <li class="nav-item">
+                                  <a class="nav-link" href="/about">About<span class="sr-only">(current)</span></a>
+                              </li>
+                                  <a href="" class="nav-link d-none d-sm-inline">Sidebar</a>
+                          <a href="" class="nav-link">Link</a>
+                          <a href="" class="nav-link">Link</a>
+                          <a href="" class="nav-link">Link</a>
+                          <a href="" class="nav-link">Link</a>
+                          <a href="" class="nav-link">Link</a>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-10" id="main">
+                  <main class="py-4">
+                      @yield('content')
+                  </main>
+              </div>
+          </div>
+      </div>
 </body>
 </html>
