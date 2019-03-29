@@ -8,20 +8,20 @@
 }
 
 #sidebar {
-    background-color: #ddd;
+    background-color: #777;
 }
 
 #sidebar ul li a {
     padding: 25px;
     font-size: 20px;
     display: block;
-    color: #333;
-    text-shadow: 1px 1px #fff;
+    color: #ddd;
+    text-shadow: 1px 1px #333;
     border-bottom: 1px solid #333;
 }
 
 #sidebar ul li a:hover {
-    color: #ddd;
-    background: #777;
-    text-shadow: 1px 1px #333;
+    color: #333;
+    background: #ddd;
+    text-shadow: 1px 1px #fff;
 }

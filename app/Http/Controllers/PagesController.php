@@ -41,5 +41,9 @@ class PagesController extends Controller
 	public function ingest() {
 		return view('ingest');
 	}
+
+	public function speicherorte() {
+		return view('speicherorte');
+	}
 	
 }

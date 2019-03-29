@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 </head>
@@ -80,16 +81,30 @@
                       <div class="">
                           <ul class="nav flex-sm-column">
                               <li class="nav-item">
-                                  <a class="nav-link" href="/ingest">Ingest<span class="sr-only">(current)</span></a>
+                                  <a class="nav-link" href="/ingest">
+                                    <i class="fas fa-file-upload mr-3"></i>
+                                    Ingest<span class="sr-only">(current)</span></a>
                               </li>
                               <li class="nav-item">
-                                  <a class="nav-link" href="/datenbank">Datenbank<span class="sr-only">(current)</span></a>
+                                  <a class="nav-link" href="/datenbank">
+                                    <i class="fas fa-database mr-3"></i>
+                                    Datenbank<span class="sr-only">(current)</span></a>
                               </li>
                               <li class="nav-item">
-                                  <a class="nav-link" href="/about">About<span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="/speicherorte">
+                                <i class="fas fa-folder mr-3"></i>
+                                  Speicherorte<span class="sr-only">(current)</span></a>
+                            </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="/about">
+                                    <i class="fas fa-users mr-2"></i>
+                                    About<span class="sr-only">(current)</span></a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="/contact">Kontakt<span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="/contact">
+                                    <i class="fas fa-envelope-square mr-3"></i>
+                                    Kontakt<span class="sr-only">(current)</span>
+                                </a>
                             </li>
                           </ul>     
                       </div>

@@ -27,3 +27,4 @@ Route::get('/about', 'PagesController@about')->name('about');
 Route::get('/contact', 'PagesController@contact')->name('contact');
 Route::get('/datenbank', 'PagesController@datenbank')->name('datenbank');
 Route::get('/ingest', 'PagesController@ingest')->name('ingest');
+Route::get('/speicherorte', 'PagesController@speicherorte')->name('speicherorte');
