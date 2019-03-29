@@ -9,13 +9,15 @@ class PagesController extends Controller
 	
 	
 	
+	
+	
 	/**
 	* Create a new controller instance.
-			     *
-			     * @return void
-			     */
-			    public function __construct()
-			    {
+					     *
+					     * @return void
+					     */
+					    public function __construct()
+					    {
 		$this->middleware('auth');
 	}
 	
@@ -28,5 +30,16 @@ class PagesController extends Controller
 		return view('about');
 	}
 	
+	public function contact() {
+		return view('contact');
+	}
+	
+	public function datenbank() {
+		return view('datenbank');
+	}
+	
+	public function ingest() {
+		return view('ingest');
+	}
 	
 }

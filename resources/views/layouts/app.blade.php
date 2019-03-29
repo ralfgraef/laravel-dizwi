@@ -80,15 +80,18 @@
                       <div class="">
                           <ul class="nav flex-sm-column">
                               <li class="nav-item">
+                                  <a class="nav-link" href="/ingest">Ingest<span class="sr-only">(current)</span></a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="/datenbank">Datenbank<span class="sr-only">(current)</span></a>
+                              </li>
+                              <li class="nav-item">
                                   <a class="nav-link" href="/about">About<span class="sr-only">(current)</span></a>
                               </li>
-                                  <a href="" class="nav-link d-none d-sm-inline">Sidebar</a>
-                          <a href="" class="nav-link">Link</a>
-                          <a href="" class="nav-link">Link</a>
-                          <a href="" class="nav-link">Link</a>
-                          <a href="" class="nav-link">Link</a>
-                          <a href="" class="nav-link">Link</a>
-                          </ul>
+                              <li class="nav-item">
+                                <a class="nav-link" href="/contact">Kontakt<span class="sr-only">(current)</span></a>
+                            </li>
+                          </ul>     
                       </div>
                   </div>
               </div>

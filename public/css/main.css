@@ -10,3 +10,18 @@
 #sidebar {
     background-color: #ddd;
 }
+
+#sidebar ul li a {
+    padding: 25px;
+    font-size: 20px;
+    display: block;
+    color: #333;
+    text-shadow: 1px 1px #fff;
+    border-bottom: 1px solid #333;
+}
+
+#sidebar ul li a:hover {
+    color: #ddd;
+    background: #777;
+    text-shadow: 1px 1px #333;
+}
