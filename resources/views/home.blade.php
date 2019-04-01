@@ -15,6 +15,27 @@
                     @endif
 
                     You are logged in!
+                     <table class="table">
+                       <thead>
+                         <tr>
+                           <th>Spalte1</th>
+                           <th>Spalte2</th>
+                           <th>Spalte3</th>
+                         </tr>
+                       </thead>
+                       <tbody>
+                         <tr>
+                           <td scope="row"></td>
+                           <td></td>
+                           <td></td>
+                         </tr>
+                         <tr>
+                           <td scope="row"></td>
+                           <td></td>
+                           <td></td>
+                         </tr>
+                       </tbody>
+                     </table>
                 </div>
             </div>
         </div>
