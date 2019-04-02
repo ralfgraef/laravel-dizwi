@@ -19,17 +19,6 @@ class PagesController extends Controller
 {
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	/**
 	* Create a new controller instance.
 					     *
@@ -41,68 +30,26 @@ class PagesController extends Controller
 	
 	public function __construct()
 	{
-		
-		
-		
-		
+			
 		$this->middleware('auth');
 		
-		
-		
-		
 	}
-	
-	
-	
-	
-	
 	
 	public function index() {
-		
-		
-		
-		
-		$users = User::all();
-		
-		
-		
-		
-		return view('home', compact('users'));
-		
-		
-		
+			
+		return view('home');
 		
 	}
-	
-	
-	
-	
 	
 	public function about() {
-		
-		
-		
-		
+			
 		return view('about');
-		
-		
-		
 		
 	}
 	
-	
-	
-	
-	
 	public function contact() {
-		
-		
-		
-		
+			
 		return view('contact');
-		
-		
-		
 		
 	}
 	
@@ -112,13 +59,9 @@ class PagesController extends Controller
 	
 	public function datenbank() {
 		
+		$users = User::all();
 		
-		
-		
-		return view('datenbank');
-		
-		
-		
+		return view('datenbank', compact('users'));
 		
 	}
 	
