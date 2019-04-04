@@ -15,6 +15,8 @@
                 <th>Email</th>
                 <th>Created At</th>
                 <th>Updated At</th>
+                <th>Bewertung</th>
+                <th>DLZA</th>
               </tr>
             </thead>
             

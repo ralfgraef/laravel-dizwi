@@ -137,7 +137,17 @@
             { data: 'email', name: 'email' },
             { data: 'created_at', name: 'created_at' },
             { data: 'updated_at', name: 'updated_at' },
-        ]
+        ],
+       
+      columnDefs: [{
+         'targets': [5,6],
+         'searchable': false,
+         'orderable': false,
+         'className': 'toggle',
+         'render': function (data, type, full, meta){
+             return '<label class="switch"><input type="checkbox" name="id[]" value="' + $('<div/>').text(data).html() + '"><span class="slider"></span></label>';
+         }
+        }],
     });
   });
 </script>
