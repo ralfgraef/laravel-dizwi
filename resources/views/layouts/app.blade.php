@@ -26,11 +26,9 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-laravel">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{ url('/home') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-
-
+                  <a class="navbar-brand" href="{{ url('/home') }}">
+                      {{ config('app.name', 'Laravel') }}
+                  </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -77,42 +75,18 @@
         
         <div class="container-fluid">
           <div class="row">
-              <div class="col-sm-2 px-1" id="sidebar">
-                  <div class="py-2 sticky-top flex-grow-1">
-                      <div class="">
-                          <ul class="nav flex-sm-column">
-                              <li class="nav-item">
-                                  <a class="nav-link" href="/ingest">
-                                    <i class="fas fa-file-upload mr-3"></i>
-                                    Ingest<span class="sr-only">(current)</span></a>
-                              </li>
-                              <li class="nav-item">
-                                  <a class="nav-link" href="/datenbank">
-                                    <i class="fas fa-database mr-3"></i>
-                                    Datenbank<span class="sr-only">(current)</span></a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="/speicherorte">
-                                <i class="fas fa-folder mr-3"></i>
-                                  Speicherorte<span class="sr-only">(current)</span></a>
-                            </li>
-                              <li class="nav-item">
-                                  <a class="nav-link" href="/about">
-                                    <i class="fas fa-users mr-2"></i>
-                                    About<span class="sr-only">(current)</span></a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="/contact">
-                                    <i class="fas fa-envelope-square mr-3"></i>
-                                    Kontakt<span class="sr-only">(current)</span>
-                                </a>
-                            </li>
-                          </ul>     
-                      </div>
-                  </div>
+
+              <div id="mySidebar" class="sidebar">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  <i class="fas fa-file-upload"></i><a class="zu" href="/ingest">   Ingest</a>
+                  <i class="fas fa-database"></i><a class="zu" href="/datenbank"> Datenbank</a>
+                  <i class="fas fa-folder"></i><a class="zu" href="/speicherorte"> Speicherorte</a>
+                  <i class="fas fa-users"></i><a class="zu aba" href="/about">About</a>
+                  <i class="fas fa-envelope-square"></i><a class="zu" href="/contact">  Kontakt</a>
               </div>
               <div class="col-sm-10" id="main">
                   <main class="py-4">
+                    <button class="openbtn" onclick="openNav()">☰ Toggle Sidebar</button>  
                       @yield('content')
                   </main>
               </div>
@@ -154,4 +128,17 @@
     });
   });
 </script>
+<script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      document.querySelectorAll(".zu").forEach(a=>a.style.display = "block");
+    }
+    
+    function closeNav() {
+      document.querySelectorAll(".zu").forEach(a=>a.style.display = "none");
+      document.getElementById("mySidebar").style.width = "90px";
+      document.getElementById("main").style.marginLeft= "110px";
+    }
+    </script>
 </html>

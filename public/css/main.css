@@ -5,33 +5,84 @@
 #main {
     background-color: #f9f9f9;
     height: -webkit-fill-available;
+    transition: margin-left 0.5s;
+    margin-left: 250px;
+}
+#main h2 {
+    margin-top: 26px;
 }
 
-#sidebar {
-    background-color: #777;
+/*Sidebar*/
+
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #343a40;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 100px;
+    margin-top: 50px;
 }
 
-#sidebar ul li a {
-    padding: 25px;
-    font-size: 20px;
+.sidebar a,
+.sidebar i {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
     display: block;
-    color: #ddd;
-    text-shadow: 1px 1px #333;
-    border-bottom: 1px solid #333;
+    transition: 0.3s;
 }
 
-#sidebar ul li a:hover {
-    color: #333;
-    background: #f9f9f9;
-    text-shadow: 1px 1px #fff;
+.sidebar a:hover,
+.sidebar i:hover {
+    color: #f1f1f1;
 }
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+.sidebar i {
+    float: left;
+    margin-top: 6px;
+}
+/* End Sidebar*/
 
 .table td {
     vertical-align: middle;
 }
 
+.aba {
+    margin-left: -2px;
+}
+
 label {
     margin-bottom: -7px;
+}
+
+nav a.navbar-brand {
+    font-size: 32px !important;
 }
 
 /* input checkbox datatables */
