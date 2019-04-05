@@ -75,18 +75,16 @@
         
         <div class="container-fluid">
           <div class="row">
-
+            
               <div id="mySidebar" class="sidebar">
-                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                  <i class="fas fa-file-upload"></i><a class="zu" href="/ingest">   Ingest</a>
-                  <i class="fas fa-database"></i><a class="zu" href="/datenbank"> Datenbank</a>
-                  <i class="fas fa-folder"></i><a class="zu" href="/speicherorte"> Speicherorte</a>
-                  <i class="fas fa-users"></i><a class="zu aba" href="/about">About</a>
-                  <i class="fas fa-envelope-square"></i><a class="zu" href="/contact">  Kontakt</a>
+                  <a id="hamburger" href="#">Testen<i class="fas fa-bars"></i></a>   
+                  <a class="zu" href="/ingest">Ingest<i class="fas fa-file-upload"></i></a>
+                  <a class="zu" href="/datenbank">Datenbank<i class="fas fa-database"></i></a>
+                  <a class="zu" href="/speicherorte">Speicherorte<i class="fas fa-folder"></i></a>
+                  <a class="zu" href="/contact">Kontakt<i class="fas fa-envelope-square"></i></a>
               </div>
               <div class="col-sm-10" id="main">
                   <main class="py-4">
-                    <button class="openbtn" onclick="openNav()">☰ Toggle Sidebar</button>  
                       @yield('content')
                   </main>
               </div>
@@ -128,17 +126,36 @@
     });
   });
 </script>
-<script>
+{{-- <script>
     function openNav() {
       document.getElementById("mySidebar").style.width = "250px";
       document.getElementById("main").style.marginLeft = "250px";
-      document.querySelectorAll(".zu").forEach(a=>a.style.display = "block");
+      document.querySelectorAll(".zu").forEach(a=>a.style.visibility = "visible");
     }
     
     function closeNav() {
-      document.querySelectorAll(".zu").forEach(a=>a.style.display = "none");
+      document.querySelectorAll(".zu").forEach(a=>a.style.visibility = "hidden");
       document.getElementById("mySidebar").style.width = "90px";
       document.getElementById("main").style.marginLeft= "110px";
     }
-    </script>
+    </script> --}}
+
+<script>
+
+var toggle = false;
+
+$('#hamburger').click(function() {
+    toggle = !toggle;
+
+    if(toggle){
+        $('#mySidebar').animate({left: -200});
+        $('#main').animate({left: 100});
+    }
+    else{
+        $('#main').animate({left: 250});
+        $('#mySidebar').animate({left: 0});
+    }
+
+});
+</script>
 </html>
