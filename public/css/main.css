@@ -26,16 +26,21 @@
     text-shadow: 1px 1px #fff;
 }
 
-/* input checkbox datatables */
-.toggle {
-    margin-left: 10px;
+.table td {
+    vertical-align: middle;
 }
+
+label {
+    margin-bottom: -7px;
+}
+
+/* input checkbox datatables */
 
 .switch {
     position: relative;
     display: inline-block;
     width: 60px;
-    height: 34px;
+    height: 28px;
 }
 
 .switch input {
@@ -57,7 +62,7 @@
 .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
+    height: 20px;
     width: 26px;
     left: 4px;
     bottom: 4px;
