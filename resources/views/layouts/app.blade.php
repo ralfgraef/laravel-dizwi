@@ -77,7 +77,10 @@
           <div class="row">
             
               <div id="mySidebar" class="sidebar">
-                  <a id="hamburger" href="#">Testen<i class="fas fa-bars"></i></a>   
+                  <a id="hamburger" href="#"><i class="fas fa-arrow-left"></i></a>   
+                  <br>
+                  <br>
+                  <br>
                   <a class="zu" href="/ingest">Ingest<i class="fas fa-file-upload"></i></a>
                   <a class="zu" href="/datenbank">Datenbank<i class="fas fa-database"></i></a>
                   <a class="zu" href="/speicherorte">Speicherorte<i class="fas fa-folder"></i></a>
@@ -146,14 +149,15 @@ var toggle = false;
 
 $('#hamburger').click(function() {
     toggle = !toggle;
-
     if(toggle){
         $('#mySidebar').animate({left: -200});
         $('#main').animate({left: 100});
+        $(this).find((".fas")).removeClass("fas fa-arrow-left").addClass("fas fa-arrow-right");
     }
     else{
         $('#main').animate({left: 250});
         $('#mySidebar').animate({left: 0});
+        $(this).find((".fas")).removeClass("fas fa-arrow-right").addClass("fas fa-arrow-left");
     }
 
 });

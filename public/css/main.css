@@ -81,7 +81,12 @@ label {
 }
 
 nav a.navbar-brand {
-    font-size: 32px !important;
+    font-size: 28px !important;
+    margin-left: 1.4%;
+}
+
+.sidebar #hamburger {
+    margin-top: -42px;
 }
 
 /* input checkbox datatables */
