@@ -16,6 +16,9 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://www.fes.de/favicon.ico" type="image/x-icon">
+
     <!-- Styles -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -81,10 +84,10 @@
                   <br>
                   <br>
                   <br>
-                  <a class="zu" href="/ingest">Ingest<i class="fas fa-file-upload"></i></a>
-                  <a class="zu" href="/datenbank">Datenbank<i class="fas fa-database"></i></a>
-                  <a class="zu" href="/speicherorte">Speicherorte<i class="fas fa-folder"></i></a>
-                  <a class="zu" href="/contact">Kontakt<i class="fas fa-envelope-square"></i></a>
+                  <a href="/ingest">Ingest<i class="fas fa-file-upload"></i></a>
+                  <a href="/datenbank">Datenbank<i class="fas fa-database"></i></a>
+                  <a href="/speicherorte">Speicherorte<i class="fas fa-folder"></i></a>
+                  <a href="/contact">Kontakt<i class="fas fa-envelope-square"></i></a>
               </div>
               <div class="col-sm-10" id="main">
                   <main class="py-4">
@@ -100,66 +103,36 @@
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
 <script>
-  $(document).ready( function () {
-    $('#myTable').DataTable({
-      language: {
-            "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/German.json"
-      },
-      processing: true,
-      serverSide: true,
-      ajax: '{!! route('get.users') !!}',
-      columns: [
-            { data: 'id', name: 'id' },
-            { data: 'name', name: 'name' },
-            { data: 'email', name: 'email' },
-            { data: 'created_at', name: 'created_at' },
-            { data: 'updated_at', name: 'updated_at' },
-        ],
-       
-      columnDefs: [{
-         'targets': [5,6],
-         'searchable': false,
-         'orderable': false,
-         'className': 'toggle',
-         'render': function (data, type, full, meta){
-             return '<label class="switch"><input type="checkbox" name="id[]" value="' + $('<div/>').text(data).html() + '"><span class="slider"></span></label>';
-         }
-        }],
-    });
+$(document).ready( function () {
+  $('#myTable').DataTable({
+    language: {
+          "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/German.json"
+    },
+    processing: true,
+    serverSide: true,
+    ajax: '{!! route('get.users') !!}',
+    columns: [
+          { data: 'id', name: 'id' },
+          { data: 'name', name: 'name' },
+          { data: 'email', name: 'email' },
+          { data: 'created_at', name: 'created_at' },
+          { data: 'updated_at', name: 'updated_at' },
+      ],
+     
+    columnDefs: [{
+       'targets': [5,6],
+       'searchable': false,
+       'orderable': false,
+       'className': 'toggle',
+       'render': function (data, type, full, meta){
+           return '<label class="switch"><input type="checkbox" name="id[]" value="' + $('<div/>').text(data).html() + '"><span class="slider"></span></label>';
+       }
+      }],
   });
-</script>
-{{-- <script>
-    function openNav() {
-      document.getElementById("mySidebar").style.width = "250px";
-      document.getElementById("main").style.marginLeft = "250px";
-      document.querySelectorAll(".zu").forEach(a=>a.style.visibility = "visible");
-    }
-    
-    function closeNav() {
-      document.querySelectorAll(".zu").forEach(a=>a.style.visibility = "hidden");
-      document.getElementById("mySidebar").style.width = "90px";
-      document.getElementById("main").style.marginLeft= "110px";
-    }
-    </script> --}}
-
-<script>
-
-var toggle = false;
-
-$('#hamburger').click(function() {
-    toggle = !toggle;
-    if(toggle){
-        $('#mySidebar').animate({left: -200});
-        $('#main').animate({left: 100});
-        $(this).find((".fas")).removeClass("fas fa-arrow-left").addClass("fas fa-arrow-right");
-    }
-    else{
-        $('#main').animate({left: 250});
-        $('#mySidebar').animate({left: 0});
-        $(this).find((".fas")).removeClass("fas fa-arrow-right").addClass("fas fa-arrow-left");
-    }
-
 });
 </script>
+
+<script src="{{ asset('js/sideBar.js') }}"></script>
 </html>
