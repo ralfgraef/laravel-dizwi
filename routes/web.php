@@ -8,6 +8,7 @@
 
 
 
+
 /*
 -----------------------------------------------------------------------
 | Web Routes
@@ -23,7 +24,9 @@
 
 
 
+
 Route::get('/', function () {
+	
 	
 	
 	
@@ -33,12 +36,15 @@ Route::get('/', function () {
 	
 	
 	
+	
 }
 
 
 
 
+
 );
+
 
 
 
@@ -50,12 +56,15 @@ Auth::routes();
 
 
 
+
 Route::get('/home', 'PagesController@index')->name('home');
 
 
 
 
-Route::get('/about', 'PagesController@about')->name('about');
+
+Route::get('/help', 'PagesController@help')->name('help');
+
 
 
 
@@ -65,11 +74,14 @@ Route::get('/contact', 'PagesController@contact')->name('contact');
 
 
 
+
 Route::get('/datenbank', 'PagesController@datenbank')->name('datenbank');
 
 
 
+
 Route::get('/users', 'PagesController@getUsers')->name('get.users');
+
 
 
 
@@ -78,7 +90,9 @@ Route::get('/ingest', 'PagesController@ingest')->name('ingest');
 
 
 
+
 Route::get('/speicherorte', 'PagesController@speicherorte')->name('speicherorte');
+
 
 
 

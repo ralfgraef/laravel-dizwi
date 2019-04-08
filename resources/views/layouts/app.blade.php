@@ -88,6 +88,7 @@
                   <a href="/datenbank">Datenbank<i class="fas fa-database"></i></a>
                   <a href="/speicherorte">Speicherorte<i class="fas fa-folder"></i></a>
                   <a href="/contact">Kontakt<i class="fas fa-envelope-square"></i></a>
+                  <a href="/help">Hilfe<i class="far fa-question-circle"></i></a>
               </div>
               <div class="col-sm-10" id="main">
                   <main class="py-4">

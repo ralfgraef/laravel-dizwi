@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 
 
+
 use Illuminate\Http\Request;
 
 
@@ -19,7 +20,9 @@ use Illuminate\Http\Request;
 
 
 
+
 use App\User;
+
 
 
 
@@ -40,8 +43,11 @@ use Yajra\Datatables\Datatables;
 
 
 
+
 class PagesController extends Controller
 {
+	
+	
 	
 	
 	
@@ -77,8 +83,10 @@ class PagesController extends Controller
 	
 	
 	
+	
 	public function __construct()
 	{
+		
 		
 		
 		
@@ -98,7 +106,9 @@ class PagesController extends Controller
 		
 		
 		
+		
 	}
+	
 	
 	
 	
@@ -118,6 +128,7 @@ class PagesController extends Controller
 		
 		
 		
+		
 		return view('home');
 		
 		
@@ -128,37 +139,42 @@ class PagesController extends Controller
 		
 		
 		
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	public function about() {
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		return view('about');
-		
-		
-		
-		
-		
-		
-		
-		
 		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public function help() {
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		return view('help');
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
 	
 	
 	
@@ -178,6 +194,7 @@ class PagesController extends Controller
 		
 		
 		
+		
 		return view('contact');
 		
 		
@@ -188,7 +205,9 @@ class PagesController extends Controller
 		
 		
 		
+		
 	}
+	
 	
 	
 	
@@ -202,7 +221,9 @@ class PagesController extends Controller
 		
 		
 		
+		
 		$users = User::all();
+		
 		
 		
 		
@@ -210,15 +231,20 @@ class PagesController extends Controller
 		
 		
 		
+		
 	}
+	
 	
 	
 	
 	public function getUsers() {
 		
+		
 		return Datatables::of(User::query())->make(true);
 		
+		
 	}
+	
 	
 	
 	
@@ -227,6 +253,7 @@ class PagesController extends Controller
 	
 	
 	public function ingest() {
+		
 		
 		
 		
@@ -246,7 +273,9 @@ class PagesController extends Controller
 		
 		
 		
+		
 	}
+	
 	
 	
 	
@@ -265,7 +294,9 @@ class PagesController extends Controller
 		
 		
 		
+		
 		return view('speicherorte');
+		
 		
 		
 		
@@ -283,7 +314,9 @@ class PagesController extends Controller
 	
 	
 	
+	
 }
+
 
 
 
