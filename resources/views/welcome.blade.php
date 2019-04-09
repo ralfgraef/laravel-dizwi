@@ -14,7 +14,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background: url('images/hintergrund.jpg') no-repeat center center fixed;
+                background: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%,rgba(150,150,150,0.9) 100%), url('images/hintergrund.jpg') no-repeat center center fixed;
                 background-size: cover;
                 color: #efefef;
                 text-shadow: 2px 2px #444;
@@ -22,6 +22,10 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+            }
+
+            #startseite {
+              opacity: 0.9;
             }
 
             .full-height {
