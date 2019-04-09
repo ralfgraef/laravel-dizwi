@@ -85,15 +85,19 @@
                   <br>
                   <br>
                   <a href="/ingest">Ingest<i class="fas fa-file-upload"></i></a>
+                  <br>
                   <a href="/datenbank">Datenbank<i class="fas fa-database"></i></a>
+                  <br>
                   <a href="/speicherorte">Speicherorte<i class="fas fa-folder"></i></a>
+                  <br>
                   <a href="/contact">Kontakt<i class="fas fa-envelope-square"></i></a>
+                  <br>
                   <a href="/help">Hilfe<i class="far fa-question-circle"></i></a>
               </div>
-              <div class="col-sm-10" id="main">
-                  <main class="py-4">
+              <div class="col-sm-10 p-5" id="main">
+                  
                       @yield('content')
-                  </main>
+            
               </div>
           </div>
       </div>

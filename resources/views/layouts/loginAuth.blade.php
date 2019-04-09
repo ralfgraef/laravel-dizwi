@@ -76,10 +76,10 @@
         </nav>
         <div class="container-fluid">
           <div class="row">
-              <div class="col-sm-10" id="main">
-                  <main class="py-4">
+              <div class="col-sm-10 p-5" id="main">
+                  
                       @yield('content')
-                  </main>
+                  
               </div>
           </div>
       </div>

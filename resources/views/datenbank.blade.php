@@ -1,9 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
+
            <h2>Datenbank</h2>
 
            <br>
@@ -21,7 +19,5 @@
             </thead>
             
           </table>
-        </div>
-    </div>
-</div>
+
 @endsection

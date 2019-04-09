@@ -30,7 +30,7 @@ class RegisterController extends Controller
 	     *
 	     * @var string
 	     */
-	    protected $redirectTo = '/datenbank';
+	    protected $redirectTo = '/home';
 	
 	
 	/**
