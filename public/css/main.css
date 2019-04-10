@@ -4,6 +4,7 @@
     position: relative;
     left: 250px;
     margin-top: 77px;
+    font-size: 20px;
 }
 div #tor {
     background-attachment: fixed;
@@ -31,11 +32,12 @@ div #tor {
 #help {
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
+    align-items: center;
 }
 
 #help .item {
-    flex-basis: 25%;
+    flex-basis: 30%;
+    text-align: justify;
 }
 
 .sidebar {
