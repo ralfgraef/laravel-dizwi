@@ -27,7 +27,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark navbar-laravel">
             <div class="container-fluid">
                   <a class="navbar-brand" href="{{ url('/home') }}">
                       {{ config('app.name', 'Laravel') }}

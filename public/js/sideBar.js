@@ -4,7 +4,7 @@ $("#hamburger").click(function() {
     toggle = !toggle;
     if (toggle) {
         $("#mySidebar").animate({ left: -200 });
-        $("#main").animate({ left: 100 });
+        $("#main").animate({ left: 50 });
         $(this)
             .find(".fas")
             .removeClass("fas fa-arrow-left")
