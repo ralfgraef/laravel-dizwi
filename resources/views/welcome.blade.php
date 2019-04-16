@@ -14,16 +14,28 @@
         <!-- Styles -->
         <style>
             html, body {
-                background: url('images/hintergrund.jpg') no-repeat center center fixed;
-                background-size: cover;
-                color: #efefef;
-                text-shadow: 2px 2px #444;
+                color: #444;
+                text-shadow: 2px 2px #efefef;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
-                height: 100vh;
+                height: 95%;
                 margin: 0;
             }
-
+            #opimg {
+                background-attachment: fixed;
+                background-image: url("../images/home_hintergrund.jpg");
+                background-size: cover;
+                position: absolute;
+                display: block;
+                left: 0;
+                top: 0;
+                width: 100vw;
+                height: 100vh;
+                z-index: 1;
+                background-color: hsla(0, 0%, 100%, 0.85);
+                background-blend-mode: overlay;
+                background-repeat: no-repeat;
+            }
 
             .full-height {
                 height: 100vh;
@@ -55,7 +67,7 @@
             }
 
             .links > a {
-                color: #efefef;
+                color: #444;
                 padding: 10px 8px;
                 font-size: 18px;
                 font-weight: 600;
@@ -66,7 +78,7 @@
 
             .adsd {
                 position:absolute;
-                color: #efefef;
+                color: #444;
                 font-size: 31px;
                 font-weight: 600;
                 letter-spacing: .1rem;
@@ -75,7 +87,7 @@
             }
 
             .version {
-                color: #efefef;
+                color: #444;
                 font-size: 20px;
                 font-weight: 600;
                 letter-spacing: .1rem;
@@ -89,7 +101,7 @@
             }
         </style>
     </head>
-    <body>
+    <body id="opimg">
         <div class="flex-left position-ref full-height" id="startseite">
             @if (Route::has('login'))
                 <div class="top-right links">
